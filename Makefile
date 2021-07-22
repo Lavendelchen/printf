@@ -6,12 +6,18 @@
 #    By: shaas <shaas@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/20 20:52:56 by shaas             #+#    #+#              #
-#    Updated: 2021/07/20 21:02:21 by shaas            ###   ########.fr        #
+#    Updated: 2021/07/22 13:58:49 by shaas            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = printf.h
 
 COMP = gcc -Wall -Wextra -Werror
+
+C_FILES =
+
+O_FILES = $(C_FILES:.c=.o)
+
+
 
 
