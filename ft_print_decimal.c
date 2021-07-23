@@ -6,13 +6,13 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 20:49:29 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/20 20:55:30 by shaas            ###   ########.fr       */
+/*   Updated: 2021/07/23 16:14:47 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_print_character(void)
+int	ft_print_decimal(va_list args)
 {
-	
+
 }

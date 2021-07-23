@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_hexa_lower.c                              :+:      :+:    :+:   */
+/*   ft_print_wtf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/20 20:49:31 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/23 16:14:33 by shaas            ###   ########.fr       */
+/*   Created: 2021/07/22 15:40:22 by shaas             #+#    #+#             */
+/*   Updated: 2021/07/22 15:52:21 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_print_hexa_lower(va_list args)
+int	ft_print_wtf(void)
 {
-
+	ft_putstr_fd("\nYou have entered bullshit into ft_printf.", 1);
+	return (0);
 }

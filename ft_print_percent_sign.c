@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_hexa_lower.c                              :+:      :+:    :+:   */
+/*   ft_print_percent_sign.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/20 20:49:31 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/23 16:14:33 by shaas            ###   ########.fr       */
+/*   Created: 2021/07/22 15:54:34 by shaas             #+#    #+#             */
+/*   Updated: 2021/07/23 19:47:35 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_print_hexa_lower(va_list args)
-{
+void	ft_putchar_fd(char c, int fd);
 
+int	ft_print_percent_sign(void)
+{
+	ft_putchar_fd('%', 1);
+	return (1);
 }
