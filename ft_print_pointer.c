@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 20:49:41 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/23 15:52:26 by shaas            ###   ########.fr       */
+/*   Updated: 2021/07/26 14:53:33 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_print_pointer(va_list args)
 {
-
+format specifies type 'void *'
 }

@@ -6,26 +6,20 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:46:25 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/23 20:29:07 by shaas            ###   ########.fr       */
+/*   Updated: 2021/07/28 14:17:49 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> //just for orig printf
 #include "printf.h"
 
 // what about if the amount of args, and the %s don't match? need to see how to do that
 // handle 0s & null pointers & stuff (look at every datatype)
 
-void	ft_putchar_fd(char c, int fd);
-int		ft_print_character(va_list args);
-int		ft_print_percent_sign(void);
-int		ft_print_string(va_list args);
-
-int	ft_arguments(char datatype, va_list args)
+static int	ft_arguments(char datatype, va_list args)
 {
 	int	char_num;
 
-	char_num = 0; //weg!!!
+	char_num = -1; //weg!!!
 	if (datatype == '%')
 		char_num = ft_print_percent_sign();
 	else if (datatype == 'c')
@@ -44,8 +38,8 @@ int	ft_arguments(char datatype, va_list args)
 	//	char_num = ft_print_hexa_lower(args);
 	//else if (datatype == 'X')
 	//	char_num = ft_print_hexa_upper(args); // what if its none of those? we don't need to handle that i think,. like, at all. but that sucks :( i guess i'm gonna make it so that it doesn't do anything lol. just go on without printing the "thing". i wanna print an error message. am i allowed to do that?
-	//else
-	//	char_num = ft_print_wtf();
+	else
+		char_num = ft_print_wtf();
 	return (char_num);
 }
 
@@ -66,14 +60,11 @@ int	ft_printf(const char *string, ...)
 			i++;
 			char_num = ft_arguments(string[i], args);
 			ret = ret + char_num;
-			if (char_num == 0)
-				return (ret);
+			if (char_num == -1)
+				return (-1);
 		}
 		else
-		{
-			ft_putchar_fd(string[i], 1);
-			ret++;
-		}
+			ret = ret + ft_actually_print_character(string[i]);
 		i++;
 	}
 	va_end(args);
@@ -82,7 +73,7 @@ int	ft_printf(const char *string, ...)
 
 int	main(void)
 {
-	printf("orig return: %d ", printf("orig: %c, %s\n", '\n', NULL));
-	printf("my return: %d ", ft_printf("mine: %c, %s\n", '\n', NULL));
+	//printf("orig return: %d ", printf("orig: %c, %s\n", 'e', NULL));
+	printf("my return: %d ", ft_printf("mine: %x"));
 	return (0);
 }

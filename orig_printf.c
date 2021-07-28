@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 17:31:57 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/23 20:30:52 by shaas            ###   ########.fr       */
+/*   Updated: 2021/07/26 15:49:00 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 int	main(void)
 {
-	char *ptr;
-	char c = 3;
+	long	c = 'A';
 
-	ptr = &c;
-	printf("%p", ptr);
+	printf("%c", c);
 }
 
 // NULL pointer: segmentation fault. don't need to handle that.

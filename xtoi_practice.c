@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_character.c                               :+:      :+:    :+:   */
+/*   xtoi_practice.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/20 20:49:26 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/28 13:30:09 by shaas            ###   ########.fr       */
+/*   Created: 2021/07/26 14:56:17 by shaas             #+#    #+#             */
+/*   Updated: 2021/07/26 15:03:12 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
-
-int	ft_actually_print_character(int c)
+int		xtoi(char	*hexa_lower)
 {
-	write(1, &c, 1);
-	return (1);
-}
+	size_t	hexa_len;
+	int		i;
 
-int	ft_print_character(va_list args)
-{
-	int	c;
+	
+	hexa_len = ft_strlen(hexa_lower);
+	while (hexa_len >= 0)
+	{
 
-	c = va_arg(args, int);
-	return (ft_actually_print_character(c));
+		hexa_len--;
+	}
 }

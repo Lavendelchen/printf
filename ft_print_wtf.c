@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 15:40:22 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/22 15:52:21 by shaas            ###   ########.fr       */
+/*   Updated: 2021/07/28 14:17:14 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	ft_print_wtf(void)
 {
-	ft_putstr_fd("\nYou have entered bullshit into ft_printf.", 1);
-	return (0);
+	ft_actually_print_string("\nYou have entered bullshit into ft_printf.\n");
+	return (-1);
 }
