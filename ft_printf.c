@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:46:25 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/28 14:17:49 by shaas            ###   ########.fr       */
+/*   Updated: 2021/07/28 14:25:33 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int	ft_printf(const char *string, ...)
 
 int	main(void)
 {
-	//printf("orig return: %d ", printf("orig: %c, %s\n", 'e', NULL));
-	printf("my return: %d ", ft_printf("mine: %x"));
+	printf("orig return: %d ", printf("orig: %x\n", UINT_MAX));
+	//printf("my return: %d ", ft_printf("mine: %x"));
 	return (0);
 }
