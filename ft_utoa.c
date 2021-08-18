@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 15:32:15 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/28 15:44:09 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/18 15:07:54 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ft_assign(unsigned int n, char *nbr, int i)
 	return (i);
 }
 
-char	*ft_utoa(unsigned int n)
+char	*ft_utoa(unsigned int n) // if used, free str!!!
 {
 	char	nbr[12];
 	int		i;

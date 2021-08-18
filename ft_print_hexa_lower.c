@@ -6,32 +6,47 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 20:49:31 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/28 15:44:34 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/18 20:17:48 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static char*	ft_hexa_maker(int i, unsigned int x_l, char *hexa_str) // null terminator?
+#include "printf.h"
+
+static int*	ft_hexa_converter(unsigned int x_l, int arr[8])
 {
-	while ()
-	hexa_str[i] =
+	int	divider;
+	int	i;
+
+	divider = 268435456;
+	i = 0;
+	while (divider > 0)
+	{
+		arr[i] = x_l / divider;
+		arr[i + 1] = x_l % divider;
+		i++;
+		divider = divider / 16;
+	}
+	return (arr);
 }
 
 int	ft_actually_print_hexa_lower(unsigned int x_l)
 {
-	char	*hexa_str;
-	char	*x_l_str;
+	char	*the_string;
+	int		arr[8];
 
-	x_l_str = ft_utoa(x_l);
-	hexa_str = ft_hexa_maker(7, x_l, hexa_str);
-	free (x_l_str)
-	return ();
+	bzero(arr, 8 * sizeof(int));
+	the_string = ft_hexa_converter(x_l, arr);
+
+
+	free (x_l_string);
+	return ()
 }
 
-//int	ft_print_hexa_lower(va_list args)
-//{
-//	unsigned int	x_l;
-//
-//	x_l = va_arg(args, unsigned int);
-//	return (ft_actually_print_hexa_lower(x_l));
-//}
-//
+int	ft_print_hexa_lower(va_list args)
+{
+	unsigned int	x_l;
+
+	x_l = va_arg(args, unsigned int);
+	return (ft_actually_print_hexa_lower(x_l));
+}
+

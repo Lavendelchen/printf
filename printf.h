@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:47:18 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/28 15:33:47 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/18 15:09:20 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <stdio.h> // test purposes
 # include <limits.h> // UINT_MAX (hexa)
 # include <stdlib.h> // malloc/free
+
+//libft????
 
 int		ft_printf(const char *string, ...);
 int		ft_print_character(va_list args);
