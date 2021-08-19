@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:46:25 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/28 14:25:33 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/19 20:19:35 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ static int	ft_arguments(char datatype, va_list args)
 	//	char_num = ft_print_integer(args);
 	//else if (datatype == 'u')
 	//	char_num = ft_print_unsigned(args);
-	//else if (datatype == 'x')
-	//	char_num = ft_print_hexa_lower(args);
+	else if (datatype == 'x')
+		char_num = ft_print_hexa_lower(args);
 	//else if (datatype == 'X')
 	//	char_num = ft_print_hexa_upper(args); // what if its none of those? we don't need to handle that i think,. like, at all. but that sucks :( i guess i'm gonna make it so that it doesn't do anything lol. just go on without printing the "thing". i wanna print an error message. am i allowed to do that?
 	else
@@ -73,7 +73,7 @@ int	ft_printf(const char *string, ...)
 
 int	main(void)
 {
-	printf("orig return: %d ", printf("orig: %x\n", UINT_MAX));
-	//printf("my return: %d ", ft_printf("mine: %x"));
+	printf("orig return: %d ", printf("orig: %x\n", 123));
+	printf("my return: %d ", ft_printf("mine: %x", 123));
 	return (0);
 }

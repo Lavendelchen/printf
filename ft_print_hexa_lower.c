@@ -6,13 +6,13 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 20:49:31 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/18 20:17:48 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/19 20:18:47 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-static int*	ft_hexa_converter(unsigned int x_l, int arr[8])
+int*	ft_hexa_converter(unsigned int x_l, int arr[8])
 {
 	int	divider;
 	int	i;
@@ -29,17 +29,32 @@ static int*	ft_hexa_converter(unsigned int x_l, int arr[8])
 	return (arr);
 }
 
-int	ft_actually_print_hexa_lower(unsigned int x_l)
+int	ft_print_hexa(int *arr, char *char_set)
 {
-	char	*the_string;
-	int		arr[8];
+	int i;
+	int char_num;
 
-	bzero(arr, 8 * sizeof(int));
-	the_string = ft_hexa_converter(x_l, arr);
+	i = 0;
+	char_num = 0;
+	while (i < 8)
+	{
+		char_num = char_num + ft_actually_print_character(char_set[arr[i]]);
+		i++;
+	}
+	return (char_num);
+}
 
+static int	ft_actually_print_hexa_lower(unsigned int x_l)
+{
+	int		hexa_arr[8];
+	char	*char_set;
+	int		ret;
 
-	free (x_l_string);
-	return ()
+	ft_bzero(hexa_arr, 8 * sizeof(int));
+	char_set = "0123456789abcdef";
+	hexa_arr = ft_hexa_converter(x_l, hexa_arr);
+	ret = ft_print_hexa(hexa_arr, "0123456789abcdef");
+	return (ret);
 }
 
 int	ft_print_hexa_lower(va_list args)
