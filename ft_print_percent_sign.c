@@ -6,11 +6,11 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 15:54:34 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/28 13:55:07 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/21 15:50:45 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libftprintf.h"
 
 int	ft_print_percent_sign(void)
 {

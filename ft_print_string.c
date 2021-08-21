@@ -6,11 +6,11 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 20:49:43 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/21 15:01:10 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/21 15:50:52 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libftprintf.h"
 
 int	ft_print_string(va_list args)
 {

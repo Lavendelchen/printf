@@ -6,11 +6,11 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 15:17:28 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/21 15:21:53 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/21 15:50:24 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libftprintf.h"
 
 void	ft_hexa_converter(unsigned long long x, int *arr,
 unsigned long long divider)

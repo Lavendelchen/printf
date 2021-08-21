@@ -6,11 +6,11 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 15:40:22 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/28 14:17:14 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/21 15:50:59 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libftprintf.h"
 
 int	ft_print_wtf(void)
 {

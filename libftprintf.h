@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:47:18 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/21 15:26:39 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/21 15:51:38 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
 
 # include <stdarg.h> // variadic functions
 # include <unistd.h> // uhhhh not sure
 # include <stdio.h> // test purposes
 # include <limits.h> // UINT_MAX (hexa)
 # include <stdlib.h> // malloc/free
+# include "libftprintf.h"
 
 int		ft_printf(const char *string, ...);
 int		ft_print_percent_sign(void);

@@ -6,11 +6,11 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 15:01:00 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/21 15:03:52 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/21 15:50:23 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libftprintf.h"
 
 int	ft_actually_print_string(char *str)
 {
