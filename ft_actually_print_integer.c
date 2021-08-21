@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
+/*   ft_actually_print_integer.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/20 20:49:46 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/21 15:14:22 by shaas            ###   ########.fr       */
+/*   Created: 2021/08/21 15:09:16 by shaas             #+#    #+#             */
+/*   Updated: 2021/08/21 15:10:32 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-static int	ft_actually_print_unsigned(unsigned int u, int ret)
+int	ft_actually_print_integer(int i, int ret)
 {
-	if (u >= 10)
+	if (i == -2147483648)
+		return (ft_actually_print_string("-2147483648"));
+	else if (i < 0)
 	{
-		ret = ft_actually_print_unsigned((u / 10), ret);
-		ret = ft_actually_print_unsigned((u % 10), ret);
+		ret = ft_actually_print_character('-');
+		i = i * -1;
+		return (ft_actually_print_integer(i, ret));
+	}
+	else if (i >= 10)
+	{
+		ret = ft_actually_print_integer((i / 10), ret);
+		ret = ft_actually_print_integer((i % 10), ret);
 	}
 	else
 	{
-		ret = ret + ft_actually_print_character(u + '0');
+		ret = ret + ft_actually_print_character(i + '0');
 		return (ret);
 	}
 	return (ret);
-}
-
-int	ft_print_unsigned(va_list args)
-{
-	unsigned int	u;
-
-	u = va_arg(args, unsigned int);
-	return (ft_actually_print_unsigned(u, 0));
 }

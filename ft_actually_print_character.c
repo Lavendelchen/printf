@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_actually_print_character.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/24 17:40:09 by shaas             #+#    #+#             */
-/*   Updated: 2021/06/25 15:26:15 by shaas            ###   ########.fr       */
+/*   Created: 2021/08/21 14:56:47 by shaas             #+#    #+#             */
+/*   Updated: 2021/08/21 14:57:10 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
-int	ft_isalnum(int c)
+int	ft_actually_print_character(int c)
 {
-	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
-		return (1);
-	else
-		return (0);
+	write(1, &c, 1);
+	return (1);
 }

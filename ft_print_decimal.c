@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 20:49:29 by shaas             #+#    #+#             */
-/*   Updated: 2021/07/23 16:14:47 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/20 18:01:26 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int	ft_print_decimal(va_list args)
 {
+	int	d;
 
+	d = va_arg(args, int);
+	return (ft_actually_print_integer(d, 0));
 }

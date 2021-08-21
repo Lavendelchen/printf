@@ -1,38 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_hexa_helpers.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/16 10:37:50 by shaas             #+#    #+#             */
-/*   Updated: 2021/06/28 18:45:23 by shaas            ###   ########.fr       */
+/*   Created: 2021/08/21 15:17:28 by shaas             #+#    #+#             */
+/*   Updated: 2021/08/21 15:21:53 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	ft_hexa_converter(unsigned long long x, int *arr,
+unsigned long long divider)
 {
-	size_t	i;
-	size_t	ret;
+	int	i;
 
 	i = 0;
-	ret = ft_strlen(src) + ft_strlen(dst);
-	if (ft_strlen(dst) >= dstsize)
-		return (ft_strlen(src) + dstsize);
-	while (*dst != '\0')
+	while (divider > 0)
 	{
-		dst++;
+		arr[i] = x / divider;
+		x = x % divider;
+		divider = divider / 16;
 		i++;
 	}
-	while (i + 1 < dstsize && *src != '\0')
+}
+
+int	ft_hexa_printer(int *arr, int size_of_arr, char *char_set)
+{
+	int	i;
+	int	ret;
+
+	i = 0;
+	ret = 0;
+	while (arr[i] == 0 && i < (size_of_arr - 1))
+		i++;
+	while (i < size_of_arr)
 	{
-		*dst = *src;
-		dst++;
-		src++;
+		ret = ret + ft_actually_print_character(char_set[arr[i]]);
 		i++;
 	}
-	*dst = '\0';
 	return (ret);
 }

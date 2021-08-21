@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_actually_print_string.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/22 20:44:54 by shaas             #+#    #+#             */
-/*   Updated: 2021/06/25 15:27:31 by shaas            ###   ########.fr       */
+/*   Created: 2021/08/21 15:01:00 by shaas             #+#    #+#             */
+/*   Updated: 2021/08/21 15:03:52 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+int	ft_actually_print_string(char *str)
 {
-	size_t	i;
-	size_t	count;
+	int	ret;
 
-	i = 0;
-	if (*needle == '\0')
-		return ((char *)haystack);
-	while (*haystack != '\0' && i < len)
+	ret = 0;
+	if (str == NULL)
+		return (ft_actually_print_string("(null)"));
+	while (*str != '\0')
 	{
-		count = 0;
-		while (haystack[count] == needle[count] && (i + count) < len)
-		{
-			count++;
-			if (needle[count] == '\0')
-				return ((char *)haystack);
-		}
-		haystack++;
-		i++;
+		ret = ret + ft_actually_print_character(*str);
+		str++;
 	}
-	return (NULL);
+	return (ret);
 }
