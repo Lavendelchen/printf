@@ -6,13 +6,13 @@
 #    By: shaas <shaas@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/20 20:52:56 by shaas             #+#    #+#              #
-#    Updated: 2021/08/21 15:27:50 by shaas            ###   ########.fr        #
+#    Updated: 2021/08/21 15:41:01 by shaas            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = printf.a
+NAME = libftprintf.a
 
-COMP = gcc -Wall -Wextra -Werror #-c!!!
+COMP = gcc -c -Wall -Wextra -Werror
 
 C_FILES = ft_printf.c ft_print_percent_sign.c ft_print_character.c ft_print_string.c \
 ft_print_integer.c ft_print_decimal.c ft_print_unsigned.c \

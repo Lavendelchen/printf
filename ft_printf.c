@@ -6,14 +6,11 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:46:25 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/21 15:30:21 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/21 15:41:42 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-
-// what about if the amount of args, and the %s don't match? need to see how to do that
-// handle 0s & null pointers & stuff (look at every specifier)
 
 static int	ft_arguments(char specifier, va_list args)
 {
@@ -70,14 +67,15 @@ int	ft_printf(const char *string, ...)
 	return (ret);
 }
 
-int	main(void) //needs to go!!!
-{
-	unsigned int	u;
-	unsigned int	*p_u;
-
-	u = 4294967295;
-	p_u = &u;
-	printf("orig return: %d\n", printf("orig: %p\n", p_u));
-	printf("my return: %d\n", ft_printf("mine: %p\n", p_u));
-	return (0);
-}
+//int	main(void) //needs to go!!!
+//{
+//	unsigned int	u;
+//	unsigned int	*p_u;
+//
+//	u = 4294967295;
+//	p_u = &u;
+//	printf("orig return: %d\n", printf("orig: %p\n", p_u));
+//	printf("my return: %d\n", ft_printf("mine: %p\n", p_u));
+//	return (0);
+//}
+//
