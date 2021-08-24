@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 20:49:31 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/21 15:50:34 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/24 21:08:59 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	ft_actually_print_hexa_lower(unsigned int x_l)
 	return (ret);
 }
 
-int	ft_print_hexa_lower(va_list args)
+int	ft_print_hexa_lower(va_list args, t_flags *flags)
 {
 	unsigned int	x_l;
 

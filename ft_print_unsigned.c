@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 20:49:46 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/21 15:50:55 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/24 21:09:22 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_actually_print_unsigned(unsigned int u, int ret)
 	return (ret);
 }
 
-int	ft_print_unsigned(va_list args)
+int	ft_print_unsigned(va_list args, t_flags *flags)
 {
 	unsigned int	u;
 

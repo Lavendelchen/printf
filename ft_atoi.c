@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_actually_print_character.c                      :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/21 14:56:47 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/24 21:15:09 by shaas            ###   ########.fr       */
+/*   Created: 2021/08/24 20:22:41 by shaas             #+#    #+#             */
+/*   Updated: 2021/08/24 20:31:34 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-
-int	ft_actually_print_character(int c, t_flags *flags)
+int	ft_atoi(const char *str)
 {
-	write(1, &c, 1);
-	return (1);
+	int	i;
+
+	i = 0;
+	while (*str >= '0' && *str <= '9')
+	{
+		i = i * 10;
+		i = i + (*str - '0');
+		str++;
+	}
+	return (i);
 }

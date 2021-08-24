@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 20:49:41 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/21 15:50:49 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/24 21:09:15 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	ft_actually_print_pointer(unsigned long long ptr)
 	return (ret);
 }
 
-int	ft_print_pointer(va_list args)
+int	ft_print_pointer(va_list args, t_flags *flags)
 {
 	unsigned long long	ptr;
 

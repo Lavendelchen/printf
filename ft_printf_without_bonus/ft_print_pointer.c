@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_hexa_upper.c                              :+:      :+:    :+:   */
+/*   ft_print_pointer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/20 20:49:34 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/24 21:09:02 by shaas            ###   ########.fr       */
+/*   Created: 2021/07/20 20:49:41 by shaas             #+#    #+#             */
+/*   Updated: 2021/08/21 15:50:49 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int	ft_actually_print_hexa_upper(unsigned int x_u)
+static int	ft_actually_print_pointer(unsigned long long ptr)
 {
-	int		hexa_arr[8];
+	int		hexa_arr[16];
 	char	*char_set;
 	int		ret;
 
-	char_set = "0123456789ABCDEF";
-	ft_hexa_converter(x_u, hexa_arr, 268435456);
-	ret = ft_hexa_printer(hexa_arr, 8, char_set);
+	char_set = "0123456789abcdef";
+	ret = ft_actually_print_string("0x");
+	ft_hexa_converter(ptr, hexa_arr, 1152921504606846976);
+	ret = ret + ft_hexa_printer(hexa_arr, 16, char_set);
 	return (ret);
 }
 
-int	ft_print_hexa_upper(va_list args, t_flags *flags)
+int	ft_print_pointer(va_list args)
 {
-	unsigned int	x_u;
+	unsigned long long	ptr;
 
-	x_u = va_arg(args, unsigned int);
-	return (ft_actually_print_hexa_upper(x_u));
+	ptr = va_arg(args, unsigned long long);
+	return (ft_actually_print_pointer(ptr));
 }

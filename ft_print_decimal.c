@@ -6,13 +6,13 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 20:49:29 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/21 15:50:30 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/24 21:08:52 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_print_decimal(va_list args)
+int	ft_print_decimal(va_list args, t_flags *flags)
 {
 	int	d;
 
