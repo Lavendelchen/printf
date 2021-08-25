@@ -1,45 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flags.c                                         :+:      :+:    :+:   */
+/*   ft_print_decimal.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 20:58:38 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/25 14:43:47 by shaas            ###   ########.fr       */
+/*   Created: 2021/07/20 20:49:29 by shaas             #+#    #+#             */
+/*   Updated: 2021/08/24 21:08:52 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int	ft_outsource(const char *string, t_flags *flags, int i)
+int	ft_print_decimal(va_list args, t_flags *flags)
 {
-	if (string[i] == '#')
-	{
-		flags->hashtag++;
-		i++;
-	}
-	if (string[i] == ' ')
-	{
-		flags->space++;
-		i++;
-	}
-	if (string[i] == '+')
-	{
-		flags->plus++;
-		i++;
-	}
-	return (i);
-}
+	int	d;
 
-int	ft_flags(const char *string, t_flags *flags)
-{
-	int	i;
-
-	i = 1;
-	flags->hashtag = 0;
-	flags->space = 0;
-	flags->plus = 0;
-	i = ft_outsource(string, flags, i);
-	return (i);
+	d = va_arg(args, int);
+	return (ft_actually_print_integer(d, 0));
 }

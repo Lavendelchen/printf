@@ -1,45 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flags.c                                         :+:      :+:    :+:   */
+/*   ft_actually_print_integer.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 20:58:38 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/25 14:43:47 by shaas            ###   ########.fr       */
+/*   Created: 2021/08/21 15:09:16 by shaas             #+#    #+#             */
+/*   Updated: 2021/08/21 15:50:20 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int	ft_outsource(const char *string, t_flags *flags, int i)
+int	ft_actually_print_integer(int i, int ret)
 {
-	if (string[i] == '#')
+	if (i == -2147483648)
+		return (ft_actually_print_string("-2147483648"));
+	else if (i < 0)
 	{
-		flags->hashtag++;
-		i++;
+		ret = ft_actually_print_character('-');
+		i = i * -1;
+		return (ft_actually_print_integer(i, ret));
 	}
-	if (string[i] == ' ')
+	else if (i >= 10)
 	{
-		flags->space++;
-		i++;
+		ret = ft_actually_print_integer((i / 10), ret);
+		ret = ft_actually_print_integer((i % 10), ret);
 	}
-	if (string[i] == '+')
+	else
 	{
-		flags->plus++;
-		i++;
+		ret = ret + ft_actually_print_character(i + '0');
+		return (ret);
 	}
-	return (i);
-}
-
-int	ft_flags(const char *string, t_flags *flags)
-{
-	int	i;
-
-	i = 1;
-	flags->hashtag = 0;
-	flags->space = 0;
-	flags->plus = 0;
-	i = ft_outsource(string, flags, i);
-	return (i);
+	return (ret);
 }

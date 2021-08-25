@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:46:25 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/25 18:50:02 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/24 21:05:48 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_arguments(char specifier, t_flags *flags, va_list args)
 	int	char_num;
 
 	if (specifier == '%')
-		char_num = ft_print_percent_sign();
+		char_num = ft_print_percent_sign(flags);
 	else if (specifier == 'c')
 		char_num = ft_print_character(args, flags);
 	else if (specifier == 's')
@@ -75,14 +75,15 @@ int	ft_printf(const char *string, ...)
 	return (ret);
 }
 
-//int	main(void) //needs to go!!!
-//{
-//	unsigned int	u;
-//	unsigned int	*p_u;
-//
-//	u = 0;
-//	p_u = &u;
-//	printf("orig return: %d\n",  printf("orig: [% s]\n", NULL));
-//	printf("my return: %d\n", ft_printf("mine: [% s]\n", NULL));
-//	return (0);
-//}
+int	main(void) //needs to go!!!
+{
+	unsigned int	u;
+	unsigned int	*p_u;
+
+	u = 4294967295;
+	p_u = &u;
+	printf("orig return: %d\n",  printf("orig: %.302875d\n", 13));
+	printf("my return: %d\n", ft_printf("mine: %.302875d\n", 13));
+	return (0);
+}
+

@@ -1,45 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flags.c                                         :+:      :+:    :+:   */
+/*   ft_print_integer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 20:58:38 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/25 14:43:47 by shaas            ###   ########.fr       */
+/*   Created: 2021/08/24 21:09:05 by shaas             #+#    #+#             */
+/*   Updated: 2021/08/25 18:59:53 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int	ft_outsource(const char *string, t_flags *flags, int i)
-{
-	if (string[i] == '#')
-	{
-		flags->hashtag++;
-		i++;
-	}
-	if (string[i] == ' ')
-	{
-		flags->space++;
-		i++;
-	}
-	if (string[i] == '+')
-	{
-		flags->plus++;
-		i++;
-	}
-	return (i);
-}
-
-int	ft_flags(const char *string, t_flags *flags)
+int	ft_print_integer(va_list args, t_flags *flags)
 {
 	int	i;
+	int	ret;
 
-	i = 1;
-	flags->hashtag = 0;
-	flags->space = 0;
-	flags->plus = 0;
-	i = ft_outsource(string, flags, i);
-	return (i);
+	ret = 0;
+	i = va_arg(args, int);
+	if (flags->hashtag == 1 || (flags->space == 1 && flags->plus == 1))
+		return (ft_print_wtf());
+	else
+	{
+		if (i >= 0)
+		{
+			if (flags->space == 1)
+				ret = ret + ft_actually_print_character(' ');
+			else if (flags->plus == 1)
+				ret = ret + ft_actually_print_character('+');
+		}
+		return (ret + ft_actually_print_integer(i, 0));
+	}
 }

@@ -1,45 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flags.c                                         :+:      :+:    :+:   */
+/*   ft_print_wtf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 20:58:38 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/25 14:43:47 by shaas            ###   ########.fr       */
+/*   Created: 2021/07/22 15:40:22 by shaas             #+#    #+#             */
+/*   Updated: 2021/08/21 15:50:59 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int	ft_outsource(const char *string, t_flags *flags, int i)
+int	ft_print_wtf(void)
 {
-	if (string[i] == '#')
-	{
-		flags->hashtag++;
-		i++;
-	}
-	if (string[i] == ' ')
-	{
-		flags->space++;
-		i++;
-	}
-	if (string[i] == '+')
-	{
-		flags->plus++;
-		i++;
-	}
-	return (i);
-}
-
-int	ft_flags(const char *string, t_flags *flags)
-{
-	int	i;
-
-	i = 1;
-	flags->hashtag = 0;
-	flags->space = 0;
-	flags->plus = 0;
-	i = ft_outsource(string, flags, i);
-	return (i);
+	ft_actually_print_string("\nYou have entered bullshit into ft_printf.\n");
+	return (-1);
 }

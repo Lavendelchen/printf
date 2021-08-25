@@ -1,45 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flags.c                                         :+:      :+:    :+:   */
+/*   ft_hexa_helpers.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 20:58:38 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/25 14:43:47 by shaas            ###   ########.fr       */
+/*   Created: 2021/08/21 15:17:28 by shaas             #+#    #+#             */
+/*   Updated: 2021/08/21 15:50:24 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int	ft_outsource(const char *string, t_flags *flags, int i)
-{
-	if (string[i] == '#')
-	{
-		flags->hashtag++;
-		i++;
-	}
-	if (string[i] == ' ')
-	{
-		flags->space++;
-		i++;
-	}
-	if (string[i] == '+')
-	{
-		flags->plus++;
-		i++;
-	}
-	return (i);
-}
-
-int	ft_flags(const char *string, t_flags *flags)
+void	ft_hexa_converter(unsigned long long x, int *arr,
+unsigned long long divider)
 {
 	int	i;
 
-	i = 1;
-	flags->hashtag = 0;
-	flags->space = 0;
-	flags->plus = 0;
-	i = ft_outsource(string, flags, i);
-	return (i);
+	i = 0;
+	while (divider > 0)
+	{
+		arr[i] = x / divider;
+		x = x % divider;
+		divider = divider / 16;
+		i++;
+	}
+}
+
+int	ft_hexa_printer(int *arr, int size_of_arr, char *char_set)
+{
+	int	i;
+	int	ret;
+
+	i = 0;
+	ret = 0;
+	while (arr[i] == 0 && i < (size_of_arr - 1))
+		i++;
+	while (i < size_of_arr)
+	{
+		ret = ret + ft_actually_print_character(char_set[arr[i]]);
+		i++;
+	}
+	return (ret);
 }

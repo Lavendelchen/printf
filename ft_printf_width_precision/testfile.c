@@ -14,11 +14,17 @@
 
 int    main(void)
 {
-	int	i = 393;
-	//char s[] = "helloo";
+	int	i = 30;
 	int	*p = &i;
 
-	printf("[% +p]\n", p);
+	printf("Kamil ist %010c gut\n");
+	printf("Kamil ist %-10.0s gut\n", "sehr");
+	printf("Kamil ist %3s gut\n", "sehr");
+	printf("Kamil ist %10.2s gut\n", "sehr");
+	printf("Kamil ist %10.5d gut\n", 20);
+	printf("Kamil ist %10.5d gut\n", 20);
+	printf("Kamil ist %10.5d gut\n", 20);
+	printf("Kamil ist %20p gut\n", p);
     return (0);
 }
 

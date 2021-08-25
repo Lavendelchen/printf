@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 20:49:34 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/25 18:19:26 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/25 19:04:01 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_actually_print_hexa_upper(unsigned int x_u)
 int	ft_print_hexa_upper(va_list args, t_flags *flags)
 {
 	unsigned int	x_u;
-	int ret;
+	int				ret;
 
 	ret = 0;
 	x_u = va_arg(args, unsigned int);

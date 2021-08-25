@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:47:18 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/25 18:54:14 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/24 21:09:54 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,15 @@
 
 typedef struct s_flags
 {
-	int	hashtag;
-	int	space;
-	int	plus;
+	int	minus;
+	int	zero;
+	int	width;
+	int	precision;
 }				t_flags;
 
 int		ft_printf(const char *string, ...);
 int		ft_flags(const char *string, t_flags *flags);
-int		ft_print_percent_sign(void);
+int		ft_print_percent_sign(t_flags *flags);
 int		ft_print_character(va_list args, t_flags *flags);
 int		ft_print_string(va_list args, t_flags *flags);
 int		ft_print_integer(va_list args, t_flags *flags);

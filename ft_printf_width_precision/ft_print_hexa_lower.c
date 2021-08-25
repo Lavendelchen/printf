@@ -1,45 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flags.c                                         :+:      :+:    :+:   */
+/*   ft_print_hexa_lower.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 20:58:38 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/25 14:43:47 by shaas            ###   ########.fr       */
+/*   Created: 2021/07/20 20:49:31 by shaas             #+#    #+#             */
+/*   Updated: 2021/08/24 21:08:59 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int	ft_outsource(const char *string, t_flags *flags, int i)
+static int	ft_actually_print_hexa_lower(unsigned int x_l)
 {
-	if (string[i] == '#')
-	{
-		flags->hashtag++;
-		i++;
-	}
-	if (string[i] == ' ')
-	{
-		flags->space++;
-		i++;
-	}
-	if (string[i] == '+')
-	{
-		flags->plus++;
-		i++;
-	}
-	return (i);
+	int		hexa_arr[8];
+	char	*char_set;
+	int		ret;
+
+	char_set = "0123456789abcdef";
+	ft_hexa_converter(x_l, hexa_arr, 268435456);
+	ret = ft_hexa_printer(hexa_arr, 8, char_set);
+	return (ret);
 }
 
-int	ft_flags(const char *string, t_flags *flags)
+int	ft_print_hexa_lower(va_list args, t_flags *flags)
 {
-	int	i;
+	unsigned int	x_l;
 
-	i = 1;
-	flags->hashtag = 0;
-	flags->space = 0;
-	flags->plus = 0;
-	i = ft_outsource(string, flags, i);
-	return (i);
+	x_l = va_arg(args, unsigned int);
+	return (ft_actually_print_hexa_lower(x_l));
 }
