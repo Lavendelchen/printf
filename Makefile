@@ -6,13 +6,13 @@
 #    By: shaas <shaas@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/20 20:52:56 by shaas             #+#    #+#              #
-#    Updated: 2021/08/25 18:45:32 by shaas            ###   ########.fr        #
+#    Updated: 2021/08/26 13:40:28 by shaas            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-COMP = gcc #-c -Wall -Wextra -Werror
+COMP = gcc -c -Wall -Wextra -Werror
 
 C_FILES = ft_printf.c ft_flags.c ft_print_percent_sign.c ft_print_character.c \
 ft_print_string.c ft_print_integer.c  ft_print_wtf.c \

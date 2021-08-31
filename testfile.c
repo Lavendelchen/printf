@@ -14,11 +14,11 @@
 
 int    main(void)
 {
-	int	i = 393;
+	//int	i = 393;
 	//char s[] = "helloo";
-	int	*p = &i;
+	//int	*p = &i;
 
-	printf("[% +p]\n", p);
+	printf("%lu\n", sizeof(unsigned long));
     return (0);
 }
 
