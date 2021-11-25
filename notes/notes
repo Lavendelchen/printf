@@ -1,3 +1,43 @@
+01/09/21
+I WANT TO KNOW 
+
+26/07/21
+so, structs. different way to pass them to functions / access them. example code:
+
+typedef	struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}				t_list;
+
+void	func1(t_list new)
+{
+	blabla...
+}
+
+void	func2(t_list *new)
+{
+	blub blub blub...
+}
+
+int	main()
+{
+	t_list	num_1;
+	t_list	*num_2;
+
+	num1.content = hey;
+	num1.next = NULL;
+
+	num2->content = ho;
+	num2->next = NULL;
+
+	func1(num_1);
+	func1(*num_2);
+
+	func2(&num_1);
+	func2(num_2);
+}
+
 23/07/21
 wtfff i swear. sshit confusing. so CHAR,,, is an integer. and this: 'a' is just a ascii assignation (decimal).
 an char has the smallest rank (1) because it just accepts such few numbers. you use it beacuse its small range means
@@ -40,40 +80,3 @@ so whatever. pointers always have the same size (in the same system). no matter 
 it's just interesting to think abou different kinds of pointers bc like a boolean ptr will move like 1 fuckin bit.
 imagine using bool typecasting. not sure if they'd accept that. whatever. long long would move 8 fukcin bytes.
 thta's a lot. cool.
-
-26/07/21
-so, structs. different way to pass them to functions / access them. example code:
-
-typedef	struct	s_list
-{
-	void			*content;
-	struct s_list	*next;
-}				t_list;
-
-void	func1(t_list new)
-{
-	blabla...
-}
-
-void	func2(t_list *new)
-{
-	blub blub blub...
-}
-
-int	main()
-{
-	t_list	num_1;
-	t_list	*num_2;
-
-	num1.content = hey;
-	num1.next = NULL;
-
-	num2->content = ho;
-	num2->next = NULL;
-
-	func1(num_1);
-	func1(*num_2);
-	
-	func2(&num_1);
-	func2(num_2);
-}

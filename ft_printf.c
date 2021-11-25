@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:46:25 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/25 18:50:02 by shaas            ###   ########.fr       */
+/*   Updated: 2021/11/15 16:12:28 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,14 +75,11 @@ int	ft_printf(const char *string, ...)
 	return (ret);
 }
 
-//int	main(void) //needs to go!!!
-//{
-//	unsigned int	u;
-//	unsigned int	*p_u;
-//
-//	u = 0;
-//	p_u = &u;
-//	printf("orig return: %d\n",  printf("orig: [% s]\n", NULL));
-//	printf("my return: %d\n", ft_printf("mine: [% s]\n", NULL));
-//	return (0);
-//}
+int	main(void) //needs to go!!!
+{
+	int	u;
+
+	u = 523;
+	printf("hallo %x", u);
+	return (0);
+}

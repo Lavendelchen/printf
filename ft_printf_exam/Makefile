@@ -1,6 +1,6 @@
 NAME = libftprintf.a
 
-COMP = gcc -Wall -Wextra -Werror
+COMP = gcc -c -Wall -Wextra -Werror
 
 C_FILES = ft_printf.c
 

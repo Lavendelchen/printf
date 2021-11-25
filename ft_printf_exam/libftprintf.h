@@ -1,9 +1,12 @@
 #ifndef LIBFTPRINTF_H
-#define LIBFTPRINTF_H
 
-# include <stdarg.h>
-# include <stdlib.h>
+# define LIBFTPRINTF_H
 
-int	ft_printf(const char *string, ...);
+# include <stdarg.h> // std stuff
+# include <unistd.h> // write
+# include <stdlib.h> // malloc
+# include "libftprintf.h"
 
-#endif
+
+
+# endif

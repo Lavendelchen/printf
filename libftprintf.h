@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:47:18 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/25 18:54:14 by shaas            ###   ########.fr       */
+/*   Updated: 2021/11/25 01:54:51 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define LIBFTPRINTF_H // header zurueck aendern!!!!!! (libftprintf.h)
 
 # include <stdarg.h> // variadic functions
-# include <unistd.h> // uhhhh not sure
-# include <stdio.h> // test purposes
+# include <unistd.h> // write
+# include <stdio.h> // test purposes (printf)
 # include <limits.h> // UINT_MAX (hexa)
 # include <stdlib.h> // malloc/free
 # include "libftprintf.h"
