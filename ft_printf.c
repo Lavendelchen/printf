@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:46:25 by shaas             #+#    #+#             */
-/*   Updated: 2021/11/15 16:12:28 by shaas            ###   ########.fr       */
+/*   Updated: 2021/11/29 22:15:46 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static int	ft_printf2(int i, int ret, const char *string, va_list args)
 
 int	ft_printf(const char *string, ...)
 {
-	va_list	args;
+	va_list	args; // va stands for variable/variadic argument
 	int		i;
 	int		ret;
 

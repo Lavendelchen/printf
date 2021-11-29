@@ -6,12 +6,12 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:47:18 by shaas             #+#    #+#             */
-/*   Updated: 2021/11/25 01:54:51 by shaas            ###   ########.fr       */
+/*   Updated: 2021/11/29 22:16:02 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H // header zurueck aendern!!!!!! (libftprintf.h)
+# define LIBFTPRINTF_H
 
 # include <stdarg.h> // variadic functions
 # include <unistd.h> // write
