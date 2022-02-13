@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 21:09:05 by shaas             #+#    #+#             */
-/*   Updated: 2021/08/25 17:49:41 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/25 18:59:53 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_print_integer(va_list args, t_flags *flags)
 
 	ret = 0;
 	i = va_arg(args, int);
-	if (flags->hashtag == 1 || (flags->space == 1 && flags->plus == 1)) // because space and plus together get an error message
+	if (flags->hashtag == 1 || (flags->space == 1 && flags->plus == 1))
 		return (ft_print_wtf());
 	else
 	{

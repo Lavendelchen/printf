@@ -6,18 +6,18 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:47:18 by shaas             #+#    #+#             */
-/*   Updated: 2021/11/29 22:16:02 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/25 19:01:13 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
 
-# include <stdarg.h> // variadic functions
-# include <unistd.h> // write
-# include <stdio.h> // test purposes (printf)
-# include <limits.h> // UINT_MAX (hexa)
-# include <stdlib.h> // malloc/free
+# include <stdarg.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <limits.h>
+# include <stdlib.h>
 # include "libftprintf.h"
 
 typedef struct s_flags
@@ -45,6 +45,5 @@ int		ft_actually_print_integer(int i, int char_num);
 int		ft_hexa_printer(int *arr, int size_of_arr, char *char_set);
 void	ft_hexa_converter(unsigned long long x, int *arr,
 			unsigned long long divider);
-int		ft_atoi(const char *str);
 
 #endif

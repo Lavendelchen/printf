@@ -6,7 +6,7 @@
 /*   By: shaas <shaas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 15:46:25 by shaas             #+#    #+#             */
-/*   Updated: 2021/11/29 22:15:46 by shaas            ###   ########.fr       */
+/*   Updated: 2021/08/25 18:57:22 by shaas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static int	ft_printf2(int i, int ret, const char *string, va_list args)
 
 int	ft_printf(const char *string, ...)
 {
-	va_list	args; // va stands for variable/variadic argument
+	va_list	args;
 	int		i;
 	int		ret;
 
@@ -75,11 +75,14 @@ int	ft_printf(const char *string, ...)
 	return (ret);
 }
 
-int	main(void) //needs to go!!!
+/*int	main(void)
 {
-	int	u;
+	unsigned int	u;
+	unsigned int	*p_u;
 
-	u = 523;
-	printf("hallo %x", u);
+	u = 0;
+	p_u = &u;
+	printf("orig return: %d\n",  printf("orig: [% s]\n", NULL));
+	printf("my return: %d\n", ft_printf("mine: [% s]\n", NULL));
 	return (0);
-}
+}*/
